@@ -1,0 +1,198 @@
+/*****************************************************************************************
+
+
+    DAM / CSS
+    © Asity 2013
+
+    version: ß1.00.04
+ 
+*****************************************************************************************/
+
+div { display: block }
+
+#dm_wrap {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	font-family: helvetica;
+	font-size: 12px;  		
+}
+#dm_top_spacer {
+	height: 20px;
+}
+#dm_da {
+	background: #ededed;
+}
+	#boxAlert {
+		position: absolute;
+		z-index: 999;
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.4);
+		visibility: hidden;
+	}
+	#boxAlertBox {
+		position: relative;
+		z-index: 1000;
+		top: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 380px;
+		height: 115px;
+		border: 1px;
+		border:1px solid black;
+		background-color:white;
+		padding: 20px;
+	}
+		#boxAlertMessage {
+			width: 80%;
+			font-size: 14px;
+			font-weight: bold;
+			margin: 5px 0 0 50px;
+		}
+		#boxAlertInfo {
+			width: 80%;
+			margin: 5px 0 0 50px;
+		}
+		#boxAlertButtons {
+			position: relative;
+			z-index: 1001;
+			width: 100%;
+			text-align: right;
+			top: 95px;
+		}
+		#boxAlertButtons input[type=button] {
+			width: 100px;
+		}
+    #dm_da_title {
+        padding: 10px 0 15px 23px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+	#dm_da_data {
+		padding: 10px 0 5px 25px;
+	}
+/* >> ß1.00.02 */
+        #boxValues {
+            float: left;
+            margin-left: 115px;
+        }
+            #boxValues_col, #boxValues_col0, #boxValues_col1, #boxValues_col2 {
+                float: left;
+            }
+            #boxValues_col0 {
+                margin-left: 10px;
+            }
+            #boxValues_col0, #boxValues_col1, #boxValues_col2 {
+                text-align: center;
+            }
+            #tlValues {
+                font-weight: bold;
+            }
+            #tlValuesRow1 {
+                position: relative;
+                top: 5px;
+            }
+            #tlValuesRow2 {
+                position: relative;
+                top: 12px;
+            }
+        #boxDistance {
+            float: left;
+            margin-left: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+			#tlDistance {
+                position: relative;
+                top: 8px;
+                font-weight: bold;
+                font-size: 14px;
+			}
+            #tlDistanceUnit {
+                position: relative;
+                top: 8px;
+            }
+/* << ß1.00.02 */
+	#dm_da_data_spacer {
+        clear: both;
+		height: 10px;
+	}
+	#dm_da_area {
+		background: white;
+	}
+		#dm_da_area_control {
+			float: left;
+			height: 380px;
+/* >> ß1.00.01 (padding-left change from 25 to 15, padding-right change from 15 to 5) */
+			padding: 20px 5px 0 15px;
+/* << */
+		}
+			#boxShapes span {
+				margin: 0 0 0 20px;
+			}
+			#dm_da_area_control_spacer1 {
+				height: 20px;
+			}
+			#dm_da_area_control_spacer2 {
+				height: 10px;
+			}
+			#dm_da_area_control_spacer3 {
+				height: 10px;
+			}
+			#dm_da_area_control_spacer4 {
+				height: 94px;
+			}
+/* >> ß1.00.01 */
+            #btTitleCenter {
+                padding-right: 2px;
+            }
+            #btTitleZoom {
+                padding-right: 8px;
+            }
+            .btImageTitle {
+                position: relative;
+                top: -5px;
+            }
+/* << */
+		#dm_da_area_map {
+			float: left;
+			padding: 0 0 0 5px;
+		}
+			#dm_da_area_map_canvas {
+				clear: both;
+				width: 450px;
+				height: 450px;
+				margin: 0 0 5px 0;
+				border: 1px solid black;
+			}
+			#dm_da_area_map_search img {
+				margin: 2px 0 0 2px;
+			}
+		#dm_da_area_spacer {
+			clear: both;
+			height: 10px;
+		}
+		#dm_da_footer {
+			height: 40px;
+			padding: 5px 0 5px 25px;
+		}
+			#dm_da_footer_left {
+				float: left;
+				width: 187px;
+				padding: 0px 0 0 0px;
+			}
+			#dm_da_footer_right {
+				float: left;
+				width: 366px; /*366px*/
+			}
+				#boxGlobalButtons {
+					float: right;
+				}
+/* For Div Placement Debug */
+._frame {
+	/* border: 1px solid black; */
+	/* background: yellow; */
+}

@@ -1,0 +1,165 @@
+<!--**************************************************************************************
+ 
+ 
+    Delivery Areas Manager
+    © Asity 2013
+ 
+    version: ß1.00.05
+ 
+****************************************************************************************-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyC1Kdr4xCxJvjAhjTUTbZT3Vy4SYeiK4pw&sensor=false&libraries=geometry"></script>
+        <script type="text/javascript" src="classes/DAM_Class.js"></script>
+        <script type="text/javascript" src="classes/DAM_HtmlClass.js"></script>
+        <script type="text/javascript" src="classes/DAM_AlertClass.js"></script>
+        <script type="text/javascript" src="classes/DAM_GeometricClass.js"></script>
+        <script type="text/javascript" src="classes/DAM_MapManClass.js"></script>
+        <script type="text/javascript" src="classes/DAM_DeliveryAreasManClass.js"></script>
+        <script type="text/javascript" src="DeliveryAreasManager.js"></script>
+        <link rel="stylesheet" href="resources/DAM.css" type="text/css" />
+        <script type="text/javascript" src="resources/DAMcss.js"></script>
+    <!-- >>>> FOR LABO -->
+        <script type="text/javascript" src="labo/js.js"></script>
+        <link rel="stylesheet" href="labo/styles.css" type="text/css" />
+    <!-- <<<< FOR LABO -->
+    </head>
+  
+    <body>
+    <!-- >>>> FOR LABO -->
+        <div id="labo_list_prespacer" class="_frame"></div>
+        <div id="labo_list" class="_frame"></div>
+    <!-- <<<< FOR LABO -->
+    
+        <div id="dm_wrap">
+            <div id="dm_top_spacer" class="_frame"></div>
+            <div id="dm_da" class="_frame">
+                <div id="boxAlert">
+                    <div id="boxAlertBox">
+                            <div id="boxAlertButtons">
+                                <input id="tlAlertBtDefault" type="button" value="Default" onclick="DAM.map.iface.alert.close(1)">
+                            </div>
+                            <div id="boxAlertMessage"><div id="tlAlertMessage">Message</div></div>
+                            <div id="boxAlertInfo"><div id="tlAlertInfo">Info</div></div>
+                    </div>
+                </div>
+                <div id="dm_da_data_spacer" class="_frame"></div>
+                <div id="dm_da_title"><div id="tfTitle">Title</div></div>
+                <div id="dm_da_data" class="_frame">
+<!-- >>>> ß1.00.02 -->
+                    <div id="boxValues" style="visibility:hidden">
+                        <div id="boxValues_col">
+                            <span id="tlValues">Charges</span><br>
+                            <span id="tlValuesRow1">Extra charge in €</span><br>
+                            <span id="tlValuesRow2">Minimum order in €</span>
+                        </div>
+                        <div id="boxValues_col0">
+                            Full day<br>
+                            <input id="tfExtra0" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfExtra0.onEventFilter()" ><br>
+                            <input id="tfMinimum0" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfMinimum0.onEventFilter()"><br>
+                        </div>
+                        <div id="boxValues_col1">
+                            Lunch<br>
+                            <input id="tfExtra1" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfExtra1.onEventFilter()" ><br>
+                            <input id="tfMinimum1" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfMinimum1.onEventFilter()"><br>
+                        </div>
+                        <div id="boxValues_col2">
+                            Dinner<br>
+                            <input id="tfExtra2" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfExtra2.onEventFilter()" ><br>
+                            <input id="tfMinimum2" type="textbox" size="5" value="" onkeyup="DAM.map.iface.tfMinimum2.onEventFilter()"><br>
+                        </div>
+                    </div>
+                    <div id="boxDistance" style="visibility:hidden">
+                        Longest distance<br>
+                        from Pin<br>
+                        <span id="tlDistance">0</span><span id="tlDistanceUnit"> km</span>
+                    </div>
+
+<!-- <<<<< ß1.00.02 -->
+                </div>
+                <div id="dm_da_data_spacer" class="_frame"></div>
+                <div id="dm_da_area" class="_frame">
+                    <div id="dm_da_area_control" class="_frame">
+                            <div id="boxShapes" style="visibility:hidden">
+                                <div><input id="rdShapes" type="radio" name="rdShapes" value="" checked  onclick="DAM.map.changeShape(0)"> Circle<br><span>based</span></div>
+                                <div><input id="rdShapes" type="radio" name="rdShapes" value="" onclick="DAM.map.changeShape(1)"> Polygon<br><span>based</span></div>
+                            </div>
+                            <div id="dm_da_area_control_spacer1" class="_frame"></div>
+                            <div id="boxRadius" style="visibility:hidden">
+                                Radius in km<br>
+                                <input id="tfRadius" type="textbox" size="4" value="0" onkeyup="DAM.map.iface.tfRadius.onEventFilter(); DAM.map.circleRadiusControl()" onkeypress="(event.keyCode==13) && DAM.map.setRadius()">
+                                <input id="btRadius" type="button" value="Set" onclick="DAM.map.setRadius()">
+                            </div>
+                            <div id="dm_da_area_control_spacer2" class="_frame"></div>
+                            <div id="boxEdges" style="visibility:hidden">
+                                Edges amount<br>
+                                <input id="tfEdges" type="textbox" size="4" value="0" onkeyup="DAM.map.iface.tfEdges.onEventFilter(); DAM.map.polygonEdgesControl()" onkeypress="(event.keyCode==13) && DAM.map.polygonSetEdges()">
+                                <input id="btEdges" type="button" value="Set" onclick="DAM.map.polygonSetEdges()">
+                            </div>
+                            <div id="dm_da_area_control_spacer3" class="_frame"></div>
+                            <div id="boxBoundary" class="_frame" style="visibility:hidden">
+                                Administrative<br>Boundary<br>
+                                <input id="tfBoundary" type="textbox" size="12" value="" onfocus="DAM.map.iface.tfBoundary.onEventDefault(true)" onblur="DAM.map.iface.tfBoundary.onEventDefault(false)" onkeyup="DAM.map.polygonBoundaryControl()" onkeypress="(event.keyCode==13) && DAM.map.polygonSetBoundaryCall()"><br>
+                                <input id="btBoundary" type="button" value="Set" onclick="DAM.map.polygonSetBoundaryCall()">
+                            </div>
+                            <div id="dm_da_area_control_spacer4" class="_frame"></div>
+<!-- >>>> ß1.00.01 -->
+                            <span id="btTitleCenter" class="btImageTitle">Center</span>
+                            <input id="btCenter2pin" type="image" src="resources/btn_Pin.png" width="20px" height="20px" value="" onclick="DAM.map.centerToPin()">
+                            <input id="btCenter2shape" type="image" src="resources/btn_Shape.png" width="20px" height="20px" value="" onclick="DAM.map.centerToShape()" disabled>
+                            <br>
+                            <span id="btTitleZoom" class="btImageTitle">Zoom</span>
+                            <input id="btZoomMoins" type="image" src="resources/btn_Minus.png" width="20px" height="20px" value="" onclick="DAM.map.changeZoom(-1)">
+                            <input id="btZoomPlus" type="image" src="resources/btn_Plus.png" width="20px" height="20px" value="" onclick="DAM.map.changeZoom(1)">
+                            <br>
+<!-- <<<<< ß1.00.01 -->
+                            Map
+                            <select id="selMapType" onchange="DAM.map.changeType(this.selectedIndex+1)">
+                                <option value="Roadmap">Roadmap</option>
+                                <option value="Satellite">Satellite</option>
+                                <option value="Hybrid">Hybrid</option>
+                                <option value="Terrain">Terrain</option>
+                            </select>
+                    </div>
+                    <div id="dm_da_area_map" class="_frame">
+                        <div id="dm_da_area_map_canvas"></div>
+                        <script type="text/javascript">
+                            DAM.map.start();
+                        </script>
+                        <div id="dm_da_area_map_search" class="_frame">
+                            <img src="resources/img_marker.png" width="20px" align="top">
+                            <input id="tfSearch" type="textbox" size="35" value="" onfocus="DAM.map.iface.tfSearch.onEventDefault(true)" onblur="DAM.map.iface.tfSearch.onEventDefault(false)" onkeyup="DAM.map.searchControl()" onkeypress="(event.keyCode==13) && DAM.map.search()">
+                            <input id="btSearch" type="button" value="Search..." onclick="DAM.map.search()" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="dm_da_area_spacer" class="_frame"></div>
+                <div id="dm_da_footer">
+                    <div id="dm_da_footer_left" class="_frame">
+                        <div id="boxButtons" style="visibility:hidden">
+                            <input id="btSave" type="button" value="Save" onclick="DAM.map.closeEditArea(1)"> <input id="btCancel" type="button" value="Cancel"  onclick="DAM.map.closeEditArea(0)">
+                        </div>
+                    </div>
+                    <div id="dm_da_footer_right" class="_frame">
+                        <div id="boxGlobalButtons" style="visibility:hidden">
+                            <input id="btGlobalSave" type="button" value="Save" onclick="DAM.map.closeEditAreas(1)"> <input id="btGlobalCancel" type="button" value="Cancel"  onclick="DAM.map.closeEditAreas(0)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- >>>> FOR LABO -->
+        <script type="text/javascript">
+            DAM.map.iface.tfSearch.setDefault(); DAM.map.iface.tfTitle.setDefault();
+            laboDrawZone();
+        </script>
+        <input type="button" value="Export" onclick="laboExport()">
+    <!-- >>>> FOR LABO -->
+    </body>
+</html>
+

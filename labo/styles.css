@@ -1,0 +1,28 @@
+
+#labo_list_prespacer {
+	height: 10px;
+}
+
+#labo_list {
+}
+	#labo_list_area {
+		padding: 0 0 10px 0;
+	}
+		.labo_list_area_col {
+			float: left;
+			padding: 3px 10px 0;
+		}
+		.labo_list_area_text {
+			padding-top: 8px;
+		}
+		.labo_list_area_color {
+			margin-top: 10px;
+			height: 10px;
+			width: 20px;
+		}
+	#labo_list_area_spacer {
+		clear: both;
+	}
+#labo_list_spacer {
+	height: 20px;
+}

@@ -1,0 +1,151 @@
+/*****************************************************************************************
+
+
+    Delivery Areas Manager
+    © Asity 2013
+
+    version: ß1.00.05
+ 
+*****************************************************************************************/
+ 
+ß1.00.05
+    * New features *
+    - Introduice localised text
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass / change
+            -add localeParams proprety including decimalSeparator and text strings
+        DAM_MapManClass.js
+        .MapManClass                    |
+        .MapManClass.draw               |
+        .MapManClass.changeToLocation   | strings moving to parent.locale.texts.CODE
+        .MapManClass.reverseGeocode     |
+        .MapManClass.centerToAddress    |
+
+    - Introduice localizable decimal separator
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass / change
+            -add locale proprety including: code, decimalSeparator and text strings
+        DAM_HtmlClass.js
+        .HtmlClass / add decsep param and default value to '.'
+        .HtmlClass.setNumericValue / creation
+        .HtmlClass.numericValue / creation
+        .HtmlClass.onEventFilter / abstact RegExp on "dot"
+        DAM_MapManClass.js
+        .MapManClass / change iface.HtmlClass number with decimal init in order to
+                        add decimalSeparator param
+                        .all extra and minimum fields
+                        .tlDistance, tfEdges
+        .MapManClass.circleUpdateIfaceValues    |
+        .MapManClass.circleSetRadius            |
+        .MapManClass.circleRadiusControl        | Various changes around setNumericValue
+        .MapManClass.polygonUpdateIfaceValues   | and numericValue methods
+        .MapManClass.polygonSetRadius           |
+        .MapManClass.editArea                   |
+        .MapManClass.closeEditArea              |
+
+    * Fixes *
+    - Filter decsep for HTMLClass number formatted with 0 dec
+        DAM_HtmlClass.js
+        .HtmlClass.onEventFilter / change
+
+
+ß1.00.04
+    * New features *
+    
+    * Fixes *
+    
+    - Correct bad handling addressage geometric result objects while using litteral class
+        name rather access functions.
+        DAM_MapManClass.js
+        .MapManClass.prototype.draw / change
+
+ß1.00.03
+    * New features *
+    
+    * Fixes *
+    
+    - Correct bad handling addressage object while using litteral address at object instantiation
+        DAM_MapManClass.js
+        .MapManClass.prototype.draw / change
+
+
+ß1.00.02
+    * New features *
+    - Introduicing "mapLocationChangesMovePolygonsWhenNotDraggable" param to offer no move with Pin location change
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass.prototype / change
+        DAM_MapManClass.js
+        .MapManClass.prototype.shapeDrawAll / change
+
+    - Introduicing "resourcesFolderPath" param to facilitate resources folder relocation
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass.prototype / change
+        DAM_MapManClass.js
+        MapManClass.prototype / change
+
+    - Introduicing charges as FullDay [0], Service 1 [1] and Service [2] extra and
+        minimum in order to be abble to fix charges for noon and nigth
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass.prototype.addArea / change
+        .DeliveryAreasManClass.prototype.editNewArea / change
+        .DeliveryAreasManClass.prototype.dataLiteralExport / change
+        .DeliveryAreaClass.prototype / change
+        .DeliveryAreaClass.prototype.copy / change
+        .DeliveryAreaClass.prototype.unClassedDeliveryArea / change
+        DAM_MapManClass.js
+        .MapManClass.prototype.editArea / change
+        .MapManClass.prototype.closeEditArea / change
+
+
+ß1.00.01
+    
+    * New features *
+
+    - Introduicing bearing and wise settings for based polygon delivery areas
+        DAM_MapManClass.js
+        .MapManClass.prototype.closeEditArea
+        DAM_GeometricClass.js
+        ..PolygonClass.prototype.selfBearing /creation
+        ..PolygonClass.prototype.selfWise /creation
+        ...PolygonClass.prototype.rotationWise /creation
+        ....PointClass.circRelBearing /creation
+        .....PointClass.circAbsBearing /creation
+
+    - Set Polygon as Administrative Boundary
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass.prototype.setEditedAreaPolygon / creation
+        DAM_MapManClass.js
+        .MapManClass.prototype.polygonSetBoundaryCall / creation
+        .MapManClass.prototype.polygonSetBoundary / creation
+
+    - Introduicing 2 new buttons for Center to Pin and to Shape
+        DeliveryAreasManager.html / see comment tags
+        resources/{btn_Plus.png,btn_Minus.png,btn_Shape.png,btn_Pin.png}
+        resources/DAM.css / see comment tags
+        DAM_MapManClass.js
+        .MapManClass.prototype.centerToPin / creation
+        MapManClass.prototype.centerToShape / creation
+        .MapManClass.prototype.editAreaStateOn / modifying
+
+    - Map is now centered to pin after removing an area
+        DAM_DeliveryAreasManClass.js
+        .DeliveryAreasManClass.prototype.editionSemaphore / modifying
+
+    * Fixes *
+
+    - Cancel a new area remove really the area
+        DAM_DeliveryAreasManClass.js (editedNewAreaIdx was not took watched)
+        .DeliveryAreasManClass.prototype.editionSemaphore / modifying
+
+    - Edition shape now centers map to shape center
+        DAM_MapManClass.js
+        .MapManClass.prototype.editArea
+    - Correct floor value for Radius (parseFloat to counter ===)
+        DAM_MapManClass.js
+        .MapManClass.prototype.circleRadiusControl
+    - Correct floor value for Edges (parseInt to counter ===)
+        DAM_MapManClass.js
+        .MapManClass.prototype.polygonEdgesControl
+
+ß1.00
+    First release

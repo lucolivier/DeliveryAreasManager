@@ -1,0 +1,146 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		3615126A17833C1F006ADDDC /* DAM Revision History */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DAM Revision History"; sourceTree = "<group>"; };
+		3615126B17846A8C006ADDDC /* DAM To Do */ = {isa = PBXFileReference; lastKnownFileType = text; path = "DAM To Do"; sourceTree = "<group>"; };
+		3615126C1785BBE0006ADDDC /* btn_Minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_Minus.png; path = resources/btn_Minus.png; sourceTree = "<group>"; };
+		3615126D1785BBE1006ADDDC /* btn_Pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_Pin.png; path = resources/btn_Pin.png; sourceTree = "<group>"; };
+		3615126E1785BBE1006ADDDC /* btn_Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_Plus.png; path = resources/btn_Plus.png; sourceTree = "<group>"; };
+		3615126F1785BBE1006ADDDC /* btn_Shape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_Shape.png; path = resources/btn_Shape.png; sourceTree = "<group>"; };
+		3674D0FF175667BD00833DDF /* DAM-Android.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "DAM-Android.css"; path = "resources/DAM-Android.css"; sourceTree = "<group>"; };
+		3674D100175667BD00833DDF /* DAM-iPad.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "DAM-iPad.css"; path = "resources/DAM-iPad.css"; sourceTree = "<group>"; };
+		3674D101175667BD00833DDF /* DAM-Linux.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "DAM-Linux.css"; path = "resources/DAM-Linux.css"; sourceTree = "<group>"; };
+		3674D102175667BD00833DDF /* DAM-Windows.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = "DAM-Windows.css"; path = "resources/DAM-Windows.css"; sourceTree = "<group>"; };
+		3674D103175667BD00833DDF /* DAMcss.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAMcss.js; path = resources/DAMcss.js; sourceTree = "<group>"; };
+		36DAAAF91714DB6B008AD7B8 /* DeliveryAreasManager.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = DeliveryAreasManager.html; sourceTree = "<group>"; };
+		36DAAAFA1714DB6B008AD7B8 /* DeliveryAreasManager.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = DeliveryAreasManager.js; sourceTree = "<group>"; };
+		36DAAAFD1714DBC1008AD7B8 /* DAM_AlertClass.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_AlertClass.js; path = classes/DAM_AlertClass.js; sourceTree = "<group>"; };
+		36DAAAFE1714DBC1008AD7B8 /* DAM_Class.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_Class.js; path = classes/DAM_Class.js; sourceTree = "<group>"; };
+		36DAAAFF1714DBC1008AD7B8 /* DAM_DeliveryAreasManClass.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_DeliveryAreasManClass.js; path = classes/DAM_DeliveryAreasManClass.js; sourceTree = "<group>"; };
+		36DAAB001714DBC1008AD7B8 /* DAM_GeometricClass.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_GeometricClass.js; path = classes/DAM_GeometricClass.js; sourceTree = "<group>"; };
+		36DAAB011714DBC1008AD7B8 /* DAM_HtmlClass.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_HtmlClass.js; path = classes/DAM_HtmlClass.js; sourceTree = "<group>"; };
+		36DAAB021714DBC1008AD7B8 /* DAM_MapManClass.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = DAM_MapManClass.js; path = classes/DAM_MapManClass.js; sourceTree = "<group>"; };
+		36DAAB041714DBEB008AD7B8 /* DAM.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = DAM.css; path = resources/DAM.css; sourceTree = "<group>"; };
+		36DAAB051714DBEB008AD7B8 /* img_handle_ends_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_handle_ends_selected.png; path = resources/img_handle_ends_selected.png; sourceTree = "<group>"; };
+		36DAAB061714DBEB008AD7B8 /* img_handle_ends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_handle_ends.png; path = resources/img_handle_ends.png; sourceTree = "<group>"; };
+		36DAAB071714DBEB008AD7B8 /* img_handle_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_handle_selected.png; path = resources/img_handle_selected.png; sourceTree = "<group>"; };
+		36DAAB081714DBEB008AD7B8 /* img_handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_handle.png; path = resources/img_handle.png; sourceTree = "<group>"; };
+		36DAAB0E17177744008AD7B8 /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = styles.css; path = labo/styles.css; sourceTree = "<group>"; };
+		36DAAB1017177881008AD7B8 /* js.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = js.js; path = labo/js.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		36DAAAEE1714DA8F008AD7B8 = {
+			isa = PBXGroup;
+			children = (
+				3615126B17846A8C006ADDDC /* DAM To Do */,
+				3615126A17833C1F006ADDDC /* DAM Revision History */,
+				36DAAAFA1714DB6B008AD7B8 /* DeliveryAreasManager.js */,
+				36DAAAF91714DB6B008AD7B8 /* DeliveryAreasManager.html */,
+				36DAAB031714DBC6008AD7B8 /* classes */,
+				36DAAB091714DBF0008AD7B8 /* resources */,
+				36DAAB0F17177757008AD7B8 /* labo */,
+			);
+			sourceTree = "<group>";
+		};
+		36DAAB031714DBC6008AD7B8 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				36DAAAFE1714DBC1008AD7B8 /* DAM_Class.js */,
+				36DAAB011714DBC1008AD7B8 /* DAM_HtmlClass.js */,
+				36DAAAFD1714DBC1008AD7B8 /* DAM_AlertClass.js */,
+				36DAAB001714DBC1008AD7B8 /* DAM_GeometricClass.js */,
+				36DAAB021714DBC1008AD7B8 /* DAM_MapManClass.js */,
+				36DAAAFF1714DBC1008AD7B8 /* DAM_DeliveryAreasManClass.js */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		36DAAB091714DBF0008AD7B8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				36DAAB041714DBEB008AD7B8 /* DAM.css */,
+				3674D103175667BD00833DDF /* DAMcss.js */,
+				3674D0FF175667BD00833DDF /* DAM-Android.css */,
+				3674D100175667BD00833DDF /* DAM-iPad.css */,
+				3674D101175667BD00833DDF /* DAM-Linux.css */,
+				3674D102175667BD00833DDF /* DAM-Windows.css */,
+				36DAAB051714DBEB008AD7B8 /* img_handle_ends_selected.png */,
+				36DAAB061714DBEB008AD7B8 /* img_handle_ends.png */,
+				36DAAB071714DBEB008AD7B8 /* img_handle_selected.png */,
+				36DAAB081714DBEB008AD7B8 /* img_handle.png */,
+				3615126C1785BBE0006ADDDC /* btn_Minus.png */,
+				3615126D1785BBE1006ADDDC /* btn_Pin.png */,
+				3615126E1785BBE1006ADDDC /* btn_Plus.png */,
+				3615126F1785BBE1006ADDDC /* btn_Shape.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		36DAAB0F17177757008AD7B8 /* labo */ = {
+			isa = PBXGroup;
+			children = (
+				36DAAB0E17177744008AD7B8 /* styles.css */,
+				36DAAB1017177881008AD7B8 /* js.js */,
+			);
+			name = labo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		36DAAAEF1714DA8F008AD7B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 36DAAAF21714DA8F008AD7B8 /* Build configuration list for PBXProject "DeliveryAreasManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 36DAAAEE1714DA8F008AD7B8;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		36DAAAF31714DA8F008AD7B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		36DAAAF41714DA8F008AD7B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36DAAAF21714DA8F008AD7B8 /* Build configuration list for PBXProject "DeliveryAreasManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36DAAAF31714DA8F008AD7B8 /* Debug */,
+				36DAAAF41714DA8F008AD7B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36DAAAEF1714DA8F008AD7B8 /* Project object */;
+}
